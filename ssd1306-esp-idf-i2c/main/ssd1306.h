@@ -1,6 +1,10 @@
 #ifndef MAIN_SSD1366_H_
 #define MAIN_SSD1366_H_
 
+#include <string.h>
+#include "driver/i2c.h"
+
+
 // Following definitions are bollowed from 
 // http://robotcantalk.blogspot.com/2015/03/interfacing-arduino-with-ssd1306-driven.html
 
@@ -43,4 +47,6 @@
 // Charge Pump (pg.62)
 #define OLED_CMD_SET_CHARGE_PUMP        0x8D    // follow with 0x14
 
+void ssd1306_display_text(void *arg_text);
+void ssd1306_display_clear(); 
 #endif /* MAIN_SSD1366_H_ */
